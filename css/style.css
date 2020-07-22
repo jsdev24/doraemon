@@ -1,0 +1,279 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #a1c5ff;
+}
+
+#doraemon {
+    margin-top: 100px;
+}
+
+.head {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: #04a6d7;
+    margin: auto;
+    margin-top: 15px;
+    position: relative;
+}
+
+.face {
+    height: 250px;
+    width: 260px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #282a27;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 20px;
+}
+
+.eyes {
+    position: absolute;
+    left: 49%;
+    transform: translate(-50%);
+    top: -40px;
+}
+
+.eye {
+    width: 65px;
+    height: 75px;
+    border: 2px solid #282a27;
+    float: left;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.eyeball {
+    background-color: #282a27;
+    height: 30px;
+    width: 22px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+@keyframes eye1move {
+    0% {
+        
+    }
+
+    50% {
+        right: 30px;
+    }
+
+    100% {
+        
+    }
+}
+
+@keyframes eye2move {
+    0% {
+        
+    }
+
+    50% {
+        left: 5px;
+    }
+
+    100% {
+        
+    }
+}
+
+.eye:nth-child(1) .eyeball {
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    animation: eye1move 3s infinite;
+}
+
+.eye:nth-child(2) .eyeball {
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    animation: eye2move 3s infinite;
+}
+
+.eyeball .flare {
+    width: 6px;
+    height: 9px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 3px;
+    top: 15px;
+}
+
+.nose {
+    width: 30px;
+    height: 30px;
+    background-color: #d1052a;
+    border: 2px solid #282a27;
+    border-radius: 50%;
+    position: absolute;
+    left: 49%;
+    transform: translate(-50%);
+    top: 13px;
+}
+
+.nose .flare {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+}
+
+.beard {
+    width: 200px;
+    position: absolute;
+    top: 55px;
+    left: 53%;
+    transform: translate(-50%);
+}
+
+.left_beard {
+    width: 90px;
+    float: left;
+}
+
+.left_beard ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.left_beard ul li {
+    width: 80%;
+    height: 2px;
+    background-color: #282a27;
+    margin-bottom: 15px;
+}
+
+.left_beard ul li:nth-child(1) {
+    transform: rotate(10deg);
+    transform-origin: right;
+}
+
+.left_beard ul li:nth-child(3) {
+    transform: rotate(-10deg);
+    transform-origin: right;
+}
+
+.beard .divider {
+    position: absolute;
+    top: 65%;
+    left: 45%;
+    height: 120px;
+    width: 2px;
+    background-color: #282a27;
+    transform: translate(-50%, -50%);
+}
+
+
+.right_beard {
+    width: 90px;
+    float: left;
+    position: relative;
+}
+
+.right_beard ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.right_beard ul li {
+    width: 80%;
+    height: 2px;
+    background-color: #282a27;
+    margin-bottom: 15px;
+    margin-left: 15%;
+}
+
+.right_beard ul li:nth-child(1) {
+    transform: rotate(-10deg);
+    transform-origin: left;
+}
+
+.right_beard ul li:nth-child(3) {
+    transform: rotate(10deg);
+    transform-origin: left;
+}
+
+.mouth {
+    width: 180px;
+    height: 100px;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-bottom: 3px solid #282a27;
+    border-radius: 50%;
+}
+
+.belt {
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 2px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    bottom: -3px;
+}
+
+.belt .locket {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 243, 79);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid #282a27;
+}
+
+.belt .locket::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #282a27;
+    border-bottom: 1px solid #282a27;
+    position: absolute;
+    top: 40%;
+    transform: translate(0, -50%);
+}
+
+.locket .hole {
+    position: absolute;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 5px;
+    background-color: #282a27;
+}
+
+.locket .hole::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: #282a27;
+    height: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
